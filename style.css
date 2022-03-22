@@ -1,0 +1,161 @@
+body{
+    background-color: rgb(56, 56, 56);
+}
+.heading{
+    text-align: center;
+    background-color: mediumseagreen;
+    color: white;
+    padding-top: 6px;
+    font-family: 'Special Elite', cursive;
+}
+/*PAGE SHADOW*/
+.pageshadow{
+    position: relative;
+}
+.box{
+    height: 150px;
+    width: 150px;
+    background-color: tomato;
+    position: absolute;
+    margin-left: 650px;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    transform-origin: right;
+    transform: skewY(-5deg);
+    z-index: -1;
+    filter: blur(5px);
+}
+/* Right Shadow*/
+.box2{
+    height: 150px;
+    width: 150px;
+    background-color: tomato;
+    position: relative;
+    margin:auto;
+    left: 200px;
+}
+.box2::before{
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 10px;
+    width: 90%;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    transform-origin: left;
+    transform: skewY(5deg);
+    z-index: -1;
+    filter: blur(5px);
+    float: right;
+}
+/*CIRCLE SHADOW*/
+.circle {
+    height: 150px;
+    width: 150px;
+    background-color: tomato;
+    position: relative;
+    margin: auto;
+}
+.circle::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    bottom: -40px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(5px);
+}
+/*SQUARE SHADOW*/
+.square{
+    height: 150px;
+    width: 150px;
+    background-color: tomato;
+    position: relative;
+    margin: auto;
+}
+.square::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    bottom: -20px;
+    z-index: -1;
+    filter: blur(5px);
+}
+/*SHADOW OUTSIDE*/
+.outside{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(56, 56, 56);
+    position: relative;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.1), 
+    15px 15px 15px rgba(0, 0, 0, 0.5);
+}
+/*SHADOW INSIDE*/
+.inside{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(56, 56, 56);
+    position: relative;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.1), 
+    15px 15px 15px rgba(0, 0, 0, 0.5), 
+    inset -15px -15px 15px 
+    rgba(255, 255, 255, 0.1), inset 
+    15px 15px 15px rgba(0, 0, 0, 0.5) ;
+}
+/*SPRITE IMAGE*/
+.sprite{
+    background: no-repeat;
+    height: 58px;
+    width: 56px;
+    border-radius: 5px;
+    background-image: url(sprite.png);
+    position: relative;
+    margin: auto;
+    background-position: -547px -410px;
+    transition: 0.5s;
+}
+.sprite:hover{
+    background-position: -384px -410px;
+}
+/*CSS TRANSITION*/
+.tr{
+    height: 250px;
+    width: 250px;
+    background-color: tomato;
+    margin: 100px auto;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.tr:hover{
+    height: 150px;
+    width: 150px;
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background-color: tan;
+}
+/*FOOTER DESIGN*/
+.foo{
+    color: wheat;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    background-color: tan;
+    padding: 10px;
+}
